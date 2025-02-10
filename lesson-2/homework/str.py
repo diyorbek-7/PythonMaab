@@ -18,7 +18,7 @@ if a==a[::-1]:
 else:
     print("not palindrome")
 
-#5
+#55
 a= input()
 count1=0
 count2=0
