@@ -98,18 +98,42 @@ t2 = (1,2,4,5,4,5,6,5,8,4,5,3,1,1)
 #         break
 
 #20
+#-
 
 
 #21
+# n = 2
+# l = []
+# for i in t1:
+#     for j in range(n):
+#         l.append(i)
+# t = tuple(l)
+# print(t)
 
 #22
+# n = 1
+# m = 11
+# l = []
+# for i in range(n,m+1):
+#     l.append(i)
+# t = tuple(l)
+# print(t)
 
 #23
+l = t1[::-1]
+print(l)
 
 #24
 
-#25
+# t = (1,2,3,4,3,2,1)
+# print(t[::]==t[::-1])
 
-#26
+#25
+# l = []
+# for i in  t1:
+#     if i not in l:
+#         l.append(i)
+# t = tuple(l)
+# print(t)
 
 
