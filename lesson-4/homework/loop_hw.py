@@ -11,7 +11,7 @@ for i in list2:
         l.append(i)
 print(l)
 
-#2
+##2
 n=int(input("n="))
 for i in range(n):
     if i <n:
