@@ -17,21 +17,19 @@ for i in range(n):
     if i <n:
         print(i**2)
 
-########3
-# txt = input("Enter text: ")
-# v = 'aeiuo'
-# l = list(txt)
-# nl = []
-# for i in range (len(l)):
-#     nl.append(l[i])
-#
-#     if (i+1)%3==0:
-#             nl.insert(i,'_')
-# for i in range (2,len(nl)):
-#     if nl[i] in v:
-#             nl.insert(i+2,'_')
-#
-# print(nl)
+#3
+txt = 'abcabcdabcdeabcdefabcdefg'
+b = 'aeiou'
+count = 0
+ans = ''
+for i in range(len(txt)):
+    count += 1
+    ans += txt[i]
+    if i != len(txt) - 1 and count>=3 and txt[i] not in b:
+        b += txt[i]
+        ans += '-'
+        count = 0
+print(ans)
 
 
 
