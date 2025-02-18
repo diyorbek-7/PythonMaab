@@ -11,7 +11,8 @@ def div(a,b):
     return a/b
 print(div(2,3))
 
-#Emoloyee Records Manager
+
+#Emoloyee Records manager
 with open('employees.txt',mode='a') as f:
     id = int(input('Enter employee ID: '))
     name = input('Enter employee name: ')
