@@ -31,7 +31,6 @@ with open('employees.txt',mode='a') as f:
     position = input('Enter employee position: ')
     salary = int(input('Enter employee salary: '))
     f.write(f'{id},{name},{position},{salary}\n')
-f.close()
 
 #2
 with open('employees.txt', 'r') as file:
