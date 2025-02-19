@@ -1,0 +1,6 @@
+Total words: 79
+5 most common: a: 5
+in: 3
+simplicity: 3
+is: 3
+and: 3
