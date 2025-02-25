@@ -13,7 +13,7 @@ class Employee:
 
 
 class EmployeeManager:
-    FILE_NAME = "employees.txt"
+    FILE_NAME = "../../lesson-6/homework/employees.txt"
 
     def __init__(self):
         if not os.path.exists(self.FILE_NAME):
