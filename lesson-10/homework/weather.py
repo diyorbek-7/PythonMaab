@@ -3,6 +3,7 @@ import requests
 API_KEY = "ad513c94c2474c017ee4298342b5702c"
 CITY = "Tashkent"
 
+
 URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
 
 response = requests.get(URL)
