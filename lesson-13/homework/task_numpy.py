@@ -8,10 +8,8 @@ matrix_3x3 = np.arange(9).reshape(3, 3)
 
 # 3
 identity_matrix = np.eye(3)
-
 # 4
 random_3x3x3 = np.random.rand(3, 3, 3)
-
 # 5
 random_10x10 = np.random.rand(10, 10)
 min_val = random_10x10.min()
