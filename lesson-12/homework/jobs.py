@@ -7,8 +7,6 @@ db_name = "jobs.db"
 table_name = "jobs"
 url = "https://realpython.github.io/fake-jobs"
 
-
-# Database setup
 def setup_database():
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
@@ -27,7 +25,6 @@ def setup_database():
     conn.close()
 
 
-# Scrape job listings
 def scrape_jobs():
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")

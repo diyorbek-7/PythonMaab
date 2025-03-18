@@ -1,14 +1,11 @@
 import requests
 import random
 
-# Your TMDb API Key
 API_KEY = "49a7238fe7c13bc0865a98eb92e8d7b8"
 
-# Base URLs
 GENRE_URL = f"https://api.themoviedb.org/3/genre/movie/list?api_key={API_KEY}&language=en-US"
 MOVIE_URL = "https://api.themoviedb.org/3/discover/movie"
 
-# Fetch available genres
 response = requests.get(GENRE_URL)
 if response.status_code != 200:
     print("Error fetching genres:", response.json())
