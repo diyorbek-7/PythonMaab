@@ -14,14 +14,12 @@ if response.status_code != 200:
 genres = response.json()["genres"]
 genre_dict = {genre["name"].lower(): genre["id"] for genre in genres}
 
-# Ask the user for a genre
 user_genre = input("Enter a movie genre (e.g., Action, Comedy, Horror): ").strip().lower()
 
 if user_genre not in genre_dict:
     print("Genre not found. Please try again.")
     exit()
 
-# Get movies in the selected genre
 params = {
     "api_key": API_KEY,
     "with_genres": genre_dict[user_genre],
@@ -39,7 +37,6 @@ if not movies:
     print("No movies found for this genre.")
     exit()
 
-# Pick a random movie
 movie = random.choice(movies)
 print(f"🎬 Recommended Movie: {movie['title']} ({movie['release_date'][:4]})")
 print(f"⭐ Rating: {movie['vote_average']}/10")
