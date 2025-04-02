@@ -42,7 +42,6 @@ def scrape_jobs():
     return jobs
 
 
-# Store jobs in SQLite with incremental loading
 def store_jobs(jobs):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
@@ -60,7 +59,6 @@ def store_jobs(jobs):
     conn.close()
 
 
-# Filter jobs by location or company
 def filter_jobs(filter_by, value):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
@@ -70,7 +68,6 @@ def filter_jobs(filter_by, value):
     return results
 
 
-# Export filtered results to CSV
 def export_to_csv(filename, jobs):
     with open(filename, "w", newline="") as file:
         writer = csv.writer(file)
@@ -78,13 +75,11 @@ def export_to_csv(filename, jobs):
         writer.writerows(jobs)
 
 
-# Run the script
 if __name__ == "__main__":
     setup_database()
     jobs = scrape_jobs()
     store_jobs(jobs)
 
-    # Example: Export jobs filtered by location
     filtered_jobs = filter_jobs("location", "Remote")
     export_to_csv("filtered_jobs.csv", filtered_jobs)
     print("Job scraping and storage completed!")
