@@ -33,6 +33,5 @@ while True:
 with open("laptops.json", "w", encoding="utf-8") as f:
     json.dump(laptop_data, f, indent=4, ensure_ascii=False)
 
-# Close the browser
 driver.quit()
 
