@@ -69,7 +69,6 @@ df_movie = pd.read_csv(r'C:\Users\shoki\PycharmProjects\PythonProject\lesson-16\
 top_director = df_movie.groupby('director_name')['director_facebook_likes'].sum().idxmax()
 print("Director with the highest total Facebook likes:", top_director)
 
-# Find the 5 longest movies and their respective directors
 longest_movies = df_movie[['movie_title', 'director_name', 'duration']].nlargest(5, 'duration')
 print("\n5 Longest Movies and Their Directors:\n", longest_movies)
 
